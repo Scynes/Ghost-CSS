@@ -44,7 +44,7 @@
  *  TRANSITION FLAGS  *
  * ================== */
 .ghost-trans-slow {
-    transition: 1s ease-in-out;
+    transition: 0.8s ease-in-out;
 }
 
 .ghost-trans-med {
@@ -78,7 +78,7 @@
 }
 
 .ghost-border-thick {
-    border: 3px solid;
+    border: 2px solid;
 }
 
 /* ============= *
