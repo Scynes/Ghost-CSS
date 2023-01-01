@@ -1,13 +1,13 @@
 /* ============ *
  * Ghost V1.0.1 *
  * ============ */
- @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Inconsolata&family=Lacquer&family=Montserrat+Alternates:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Inconsolata&family=Lacquer&family=Montserrat+Alternates:wght@300&display=swap');
 
- * {
+* {
     box-sizing: border-box;
- }
- 
- :root {
+}
+
+:root {
     --phantom-purple: rgb(48, 37, 64);
     --deep-phantom-purple: rgb(32, 25, 43);
     --deep-phantom-purple-smoky: rgba(32, 25, 43, .9);
@@ -19,7 +19,67 @@
     --ectoplasm-green-bright: rgb(46, 204, 113);
     --phantom-font-drip: 'Lacquer', cursive;
     --phantom-font-flat: 'Montserrat Alternates', sans-serif;
- }
+}
+
+/* ============ *
+ *  TEXT FLAGS  *
+ * ============ */
+.ghost-fc-ecto {
+    color: var(--ectoplasm-green);
+}
+
+.ghost-fc-ecto-bright {
+    color: var(--ectoplasm-green-bright);
+}
+
+.ghost-font-drip {
+    font-family: var(--phantom-font-drip);
+}
+
+.ghost-font-flat {
+    font-family: var(--phantom-font-flat);
+}
+
+/* ================== *
+ *  TRANSITION FLAGS  *
+ * ================== */
+.ghost-trans-slow {
+    transition: 1s ease-in-out;
+}
+
+.ghost-trans-med {
+    transition: 0.5s ease-in-out;
+}
+
+.ghost-trans-fast {
+    transition: 0.25s ease-in-out;
+}
+
+/* ============ *
+ *  BACKGROUND  *
+ * ============ */
+.ghost-bgc-deep-phantom {
+    background-color: var(--deep-phantom-purple);
+}
+
+.ghost-bgc-phantom {
+    background-color: var(--phantom-purple);
+}
+
+/* ========= *
+ *  BORDERS  *
+ * ========= */
+.ghost-borderless {
+    border: none;
+}
+
+.ghost-border-thin {
+    border: 1px solid;
+}
+
+.ghost-border-thick {
+    border: 3px solid;
+}
 
 /* ============= *
  *  BASE STYLES  *
@@ -27,3 +87,26 @@
 body {
     
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+/* ============== *
+ *  INPUT STYLES  *
+ * ============== */
+.ghost-ecto-input {
+    padding: 10px;
+    font-family: var(--phantom-font-flat);
+    color: var(--deep-phantom-purple);
+    background-color: var(--ghost-white);
+}
+
+.ghost-button {
+    border-radius: 15px;
+}
+
+.ghost-button:hover {
+    background-color: var(--ectoplasm-green);
+}
+

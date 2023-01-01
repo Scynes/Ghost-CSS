@@ -1,0 +1,19 @@
+div#ghost-examples {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#ghost-input-examples {
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 500px;
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+}
