@@ -11,7 +11,7 @@ div#ghost-input-examples {
     margin: auto;
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     max-width: 800px;
 }
 
@@ -20,8 +20,16 @@ button {
     margin-bottom: 10px;
 }
 
+h1#title {
+    margin-bottom: 5px;
+}
+
+.view-code {
+    border: 1px solid;
+}
+
 code {
-    padding: 10px;
+    padding: 10px 30px;
     text-align: left;
     margin-top: 10px;
     height: auto;
@@ -30,6 +38,12 @@ code {
     border: none;
     background-color: var(--phantom-purple-light);
     color: var(--ectoplasm-green-bright);
+}
+
+img.eye {
+    cursor: pointer;
+    width: 5%;
+    content: url(/images/eye-solid.svg);
 }
 
 code:hover {
@@ -47,15 +61,26 @@ div.example {
     padding: 10px;
 }
 
+label {
+    text-decoration: underline;
+}
+
 div.hidden-dropdown {
     display: flex;
     flex-direction: column;
     overflow: hidden;
     max-height: 0;
-    transition: max-height 1s ease-out;
+    transition: max-height 2s ease-out;
 }
 
-label:hover + div.hidden-dropdown, div.hidden-dropdown:hover {
+img.eye:hover + div.hidden-dropdown, div.hidden-dropdown:hover {
     max-height: 300px;
     transition: max-height .5s ease-in;
+}
+
+@media (min-width: 480px) {
+
+    div#ghost-input-examples {
+        grid-template-columns: 1fr 1fr;
+    }
 }
