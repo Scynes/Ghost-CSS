@@ -9,6 +9,7 @@
 
 :root {
     --phantom-purple: rgb(48, 37, 64);
+    --phantom-purple-light: rgb(65, 50, 88);
     --deep-phantom-purple: rgb(32, 25, 43);
     --deep-phantom-purple-smoky: rgba(32, 25, 43, .9);
     --deep-phantom-purple-misty: rgb(32, 25, 43, .65);
@@ -30,6 +31,10 @@
 
 .ghost-fc-ecto-bright {
     color: var(--ectoplasm-green-bright);
+}
+
+.ghost-fc-deep-phantom {
+    color: var(--deep-phantom-purple);
 }
 
 .ghost-font-drip {
@@ -62,8 +67,20 @@
     background-color: var(--deep-phantom-purple);
 }
 
+.ghost-bgc-deep-phantom-light {
+    background-color: var(--deep-phantom-purple-light);
+}
+
 .ghost-bgc-phantom {
     background-color: var(--phantom-purple);
+}
+
+.ghost-bgc-phantom-light {
+    background-color: var(--phantom-purple-light);
+}
+
+.ghost-bgc-gwhite-heavy {
+    background-color: var(--ghost-white-heavy);
 }
 
 /* ========= *

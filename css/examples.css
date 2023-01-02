@@ -1,3 +1,5 @@
+@import url(./ghost.css);
+
 div#ghost-examples {
     display: flex;
     flex-direction: column;
@@ -10,7 +12,7 @@ div#ghost-input-examples {
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 1fr;
-    max-width: 500px;
+    max-width: 800px;
 }
 
 button {
@@ -22,6 +24,16 @@ code {
     padding: 10px;
     text-align: left;
     margin-top: 10px;
+    height: auto;
+    font-size: large;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--phantom-purple-light);
+    color: var(--ectoplasm-green-bright);
+}
+
+code:hover {
+    max-height: 100%;
 }
 
 span {
@@ -33,4 +45,17 @@ div.example {
     flex-direction: column;
     margin-top: 10px;
     padding: 10px;
+}
+
+div.hidden-dropdown {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+}
+
+label:hover + div.hidden-dropdown, div.hidden-dropdown:hover {
+    max-height: 300px;
+    transition: max-height .5s ease-in;
 }
