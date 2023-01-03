@@ -43,7 +43,7 @@ code {
 img.eye {
     cursor: pointer;
     width: 5%;
-    content: url(/images/eye-solid.svg);
+    content: url(../images/eye-solid.svg);
 }
 
 code:hover {
