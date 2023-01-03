@@ -15,7 +15,7 @@ div#ghost-input-examples {
     max-width: 800px;
 }
 
-button {
+button, input {
     width: 100%;
     margin-bottom: 10px;
 }
@@ -76,6 +76,10 @@ div.hidden-dropdown {
 img.eye:hover + div.hidden-dropdown, div.hidden-dropdown:hover {
     max-height: 300px;
     transition: max-height .5s ease-in;
+}
+
+hr {
+    margin: auto 40px;
 }
 
 @media (min-width: 480px) {

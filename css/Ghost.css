@@ -9,11 +9,9 @@
 
 :root {
     /* Primaries & Secondaries */
-    --default-background-color: var(--ghost-white);
+    --base-color: var(--ghost-white);
     --primary-color: var(--ectoplasm-green);
     --secondary-color: var(--deep-phantom-purple);
-    --primary-background-color: var(--deep-phantom-purple);
-    --secondary-background-color: var(--ectoplasm-green);
     /* Ghost Color Types */
     --phantom-purple: rgb(48, 37, 64);
     --phantom-purple-light: rgb(65, 50, 88);
@@ -68,9 +66,13 @@
     transition: 0.25s ease-in-out;
 }
 
-/* ============ *
- *  BACKGROUND  *
- * ============ */
+/* ================== *
+ *  BACKGROUND COLOR  *
+ * ================== */
+.ghost-bgc-base {
+    background: var(--base-color);
+}
+
 .ghost-bgc-deep-phantom {
     background-color: var(--deep-phantom-purple);
 }
@@ -83,12 +85,8 @@
     background-color: var(--phantom-purple);
 }
 
-.ghost-bgc-phantom-light {
-    background-color: var(--phantom-purple-light);
-}
-
-.ghost-bgc-gwhite-heavy {
-    background-color: var(--ghost-white-heavy);
+.ghost-bgc-ghost-white {
+    background-color: var(--ghost-white);
 }
 
 /* ========= *
@@ -124,16 +122,19 @@ button, input[type='submit'], input[type='button'] {
     padding: 10px;
     border-radius: 15px;
     font-family: var(--phantom-font-flat);
-    background-color: var(--default-background-color)
 }
 
-.ghost-bgc-hover:hover {
-    background-color: var(--primary-background-color);
-    color: var(--primary-color);
+.ghost-transparent {
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.ghost-bgc-hover-invert:hover {
-    background-color: var(--secondary-background-color);
+.ghost-c-hover:hover {
+    background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+.ghost-c-hover-invert:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
