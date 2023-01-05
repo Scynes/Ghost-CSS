@@ -28,6 +28,21 @@
     --phantom-font-flat: 'Montserrat Alternates', sans-serif;
 }
 
+/* =============== *
+ *  UTILITY FLAGS  *
+ * =============== */
+.pointer {
+    cursor: pointer;
+}
+
+.ghost-pad-10 {
+    padding: 10px;
+}
+
+.ghost-pad-20 {
+    padding: 20px;
+}
+
 /* ============ *
  *  TEXT FLAGS  *
  * ============ */
@@ -70,23 +85,15 @@
  *  BACKGROUND COLOR  *
  * ================== */
 .ghost-bgc-base {
-    background: var(--base-color);
+    background-color: var(--base-color);
 }
 
-.ghost-bgc-deep-phantom {
-    background-color: var(--deep-phantom-purple);
+.ghost-bgc-primary {
+    background-color: var(--primary-color);
 }
 
-.ghost-bgc-deep-phantom-light {
-    background-color: var(--deep-phantom-purple-light);
-}
-
-.ghost-bgc-phantom {
-    background-color: var(--phantom-purple);
-}
-
-.ghost-bgc-ghost-white {
-    background-color: var(--ghost-white);
+.ghost-bgc-secondary {
+    background-color: var(--secondary-color);
 }
 
 /* ========= *
@@ -102,17 +109,6 @@
 
 .ghost-border-thick {
     border: 2px solid;
-}
-
-/* ============= *
- *  BASE STYLES  *
- * ============= */
-body {
-    
-}
-
-.pointer {
-    cursor: pointer;
 }
 
 /* ============== *
@@ -138,3 +134,15 @@ button, input[type='submit'], input[type='button'] {
     color: var(--primary-color);
 }
 
+/* ============ *
+ *  CONTAINERS  *
+ * ============ */
+.ghost-flex-100 {
+    display: flex;
+    width: 100%;
+}
+
+.ghost-align-center {
+    justify-content: center;
+    align-items: center;
+}
