@@ -17,8 +17,6 @@
     --phantom-purple: rgb(48, 37, 64);
     --phantom-purple-light: rgb(65, 50, 88);
     --deep-phantom-purple: rgb(32, 25, 43);
-    --ghost-white: rgb(248, 248, 255);
-    --ghost-white-heavy: rgb(220, 220, 220);
     --ectoplasm-green: rgb(0, 201, 167);
     --ectoplasm-green-bright: rgb(46, 204, 113);
     /* Ghost Fonts */
@@ -75,6 +73,11 @@
     background-color: var(--base-color);
 }
 
+.color-base-invert {
+    color: var(--base-color);
+    background-color: var(--base-color-offset);
+}
+
 .color-primary {
     color: var(--primary-color);
     background-color: var(--secondary-color);
@@ -88,6 +91,11 @@
 .color-base.hover:hover {
     color: var(--base-color);
     background-color: var(--base-color-offset);
+}
+
+.color-base-invert.hover:hover {
+    color: var(--base-color-offset);
+    background-color: var(--base-color);
 }
 
 .color-primary.hover:hover {

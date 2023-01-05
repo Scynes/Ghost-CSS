@@ -1,5 +1,27 @@
 @import url(./ghost.css);
 
+body {
+    margin: 0;
+}
+
+div#ghost-input-examples {
+    background-color: white;
+}
+
+div#back {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+div#back:after {
+    content: ' ';
+    border-top: 100vh solid white;
+    border-right: 100vw solid var(--phantom-purple-light);
+    position: absolute;
+}
+
 div#ghost-examples {
     display: flex;
     gap: 40px;
@@ -23,6 +45,7 @@ button, input {
 
 h1#title {
     margin-bottom: 5px;
+
 }
 
 .view-code {

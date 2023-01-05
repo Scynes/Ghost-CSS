@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+        function download(url) {
+            const anchor = document.createElement('a');
+            anchor.href = url;
+            anchor.download = url.split('/').pop();
+            document.body.appendChild(anchor);
+            anchor.click();
+            document.body.removeChild(anchor);
+        }
+    </script>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +19,12 @@
         <title>Ghost CSS</title>
     </head>
     <body class="">
+        <div id="back"></div>
         <div id="ghost-examples" class="">
             <div class="align-center pad-10">
-                <h1 id="title" class="font-flat" style="font-size: 4em;">Ghost CSS</h1>
+                <h1 id="title" class="font-flat" style="font-size: 4em;">GHOST CSS</h1>
                 <h4 class="font-flat" style="text-align: center">A ghostly, simple CSS library.</h4>
-                <button class="pointer hover borderless color-secondary trans-med">Download</button>
+                <button class="pointer hover border-thin color-secondary medium" style="height: 50px;" onclick="download('/css/ghost.css')">Download</button>
             </div>
             <div id="ghost-input-examples" class="border-thin" style="padding: 20px; border-radius: 10px;">
                 <div id="ghost-buttons">
@@ -64,40 +75,41 @@
                     <h2 class="font-flat" style="text-align: center;">Inputs</h2>
                     <hr>
                     <div class="example">
-                        <input type="button" value="Borderless Button Type / Med" class="pointer hover color-base trans-slow borderless">
+                        <input type="button" value="Secondary Color" class="pointer hover slow borderless color-secondary">
                         <img class="eye">
                         <div class="hidden-dropdown">
                             <code>
                                 <span>pointer</span>
                                 <span>hover</span>
-                                <span>color-base</span>
-                                <span>trans-slow</span>
+                                <span>slow</span>
                                 <span>borderless</span>
+                                <span>color-secondary</span>
                             </code>
                         </div>
                     </div>
                     <div class="example">
-                        <input type="button" value="Borderless Submit Type / Fast" class="pointer hover trans-med border-thin color-primary">
+                        <input type="button" value="Base Color Inverted" class="pointer hover medium border-thin color-base-invert">
                         <img class="eye">
                         <div class="hidden-dropdown">
                             <code>
                                 <span>pointer</span>
-                                <span>ghost-c-hover-invert</span>
-                                <span>ghost-trans-fast</span>
-                                <span>ghost-border-thin</span>
-                                <span>ghost-c-primary</span>
+                                <span>hover</span>
+                                <span>fast</span>
+                                <span>border-thin</span>
+                                <span>color-base-invert</span>
                             </code>
                         </div>
                     </div>
                     <div class="example">
-                        <input type="button" value="Borderless Submit Type / Slow" class="pointer hover trans-fast border-thick color-secondary">
+                        <input type="button" value="Transparent + Secondary Color" class="pointer hover fast transparent border-thick color-secondary">
                         <img class="eye">
                         <div class="hidden-dropdown">
                             <code>
                                 <span>pointer</span>
-                                <span>ghost-c-hover</span>
-                                <span>ghost-trans-slow</span>
-                                <span>ghost-border-thick</span>
+                                <span>hover</span>
+                                <span>fast</span>
+                                <span>thick</span>
+                                <span>color-secondary</span>
                             </code>
                         </div>
                     </div>
