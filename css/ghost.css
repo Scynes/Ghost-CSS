@@ -1,27 +1,26 @@
-/* ============ *
- * Ghost V1.0.1 *
- * ============ */
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Inconsolata&family=Lacquer&family=Montserrat+Alternates:wght@300&display=swap');
 
-* {
-    box-sizing: border-box;
+:root {
+    /* Color Schemes */
+    --primary-col: rgb(252, 251, 255);
+    --secondary-col: rgb(48, 37, 64);
+    --tertiary-col: rgb(0, 201, 167);
+    --quaternary-col: rgb(32, 25, 43);
+    /* Font */
+    --primary-font: 'Monts1errat Alternates', sans-serif;
+    /* Borders */
+    --thin-border: 1px;
+    --medium-border: 2px;
+    --thick-border: 3px;
+    --default-border-style: solid;
+    /* Transition speeds */
+    --slow-transition: 0.8s;
+    --medium-transition: 0.5s;
+    --fast-transition: 0.25s;
 }
 
-:root {
-    /* Primaries & Secondaries */
-    --base-color: var(--phantom-purple);
-    --base-color-offset: var(--ectoplasm-green-bright);
-    --primary-color: var(--ectoplasm-green);
-    --secondary-color: var(--deep-phantom-purple);
-    /* Ghost Color Types */
-    --phantom-purple: rgb(48, 37, 64);
-    --phantom-purple-light: rgb(65, 50, 88);
-    --deep-phantom-purple: rgb(32, 25, 43);
-    --ectoplasm-green: rgb(0, 201, 167);
-    --ectoplasm-green-bright: rgb(46, 204, 113);
-    /* Ghost Fonts */
-    --phantom-font-drip: 'Lacquer', cursive;
-    --phantom-font-flat: 'Montserrat Alternates', sans-serif;
+* {
+    font-family: var(--primary-font);
 }
 
 /* =============== *
@@ -31,120 +30,152 @@
     cursor: pointer;
 }
 
-.pad-10 {
-    padding: 10px;
+/* ============ *
+ *    HEIGHT    *
+ * ============ */
+.h-100 {
+    height: 100%;
 }
 
-.pad-20 {
-    padding: 20px;
+.h-2rem {
+    height: 2rem;
+}
+
+.h-4rem {
+    height: 4rem;
+}
+
+.h-8rem {
+    height: 8rem;
 }
 
 /* ============ *
- *  TEXT FLAGS  *
+ *     WIDTH    *
  * ============ */
-.font-drip {
-    font-family: var(--phantom-font-drip);
+.w-100 {
+    width: 100%;
 }
 
-.font-flat {
-    font-family: var(--phantom-font-flat);
+.w-2rem {
+    width: 2rem;
+}
+
+.w-4rem {
+    width: 4rem;
+}
+
+.w-8rem {
+    width: 8rem;
+}
+
+/* ============ *
+ *    MARGIN    *
+ * ============ */
+.margin-0 {
+    margin: 0;
+}
+
+/* ============== *
+ *      FLEX      *
+ * ============== */
+.flex {
+    display: flex;
+}
+
+/* ============== *
+ *      GRID      *
+ * ============== */
+.grid {
+    display: grid;
 }
 
 /* ================== *
- *  TRANSITION FLAGS  *
+ *  FLEX/GRID SHARED  *
  * ================== */
-.slow {
-    transition: 0.8s ease-in-out;
+.fg-centered, .fg-centered-x {
+    justify-content: center;
 }
 
-.medium {
-    transition: 0.5s ease-in-out;
+.fg-centered, .fg-centered-y {
+    align-items: center;
 }
 
-.fast {
-    transition: 0.25s ease-in-out;
-}
-
-/* ======= *
- *  COLOR  *
- * ======= */
-.color-base {
-    color: var(--base-color-offset);
-    background-color: var(--base-color);
-}
-
-.color-base-invert {
-    color: var(--base-color);
-    background-color: var(--base-color-offset);
-}
-
-.color-primary {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-}
-
-.color-secondary {
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
-}
-
-.color-base.hover:hover {
-    color: var(--base-color);
-    background-color: var(--base-color-offset);
-}
-
-.color-base-invert.hover:hover {
-    color: var(--base-color-offset);
-    background-color: var(--base-color);
-}
-
-.color-primary.hover:hover {
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
-}
-
-.color-secondary.hover:hover {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-}
-
-.transparent {
-    background-color: rgb(0, 0, 0, 0);
-}
-
-/* ========= *
- *  BORDERS  *
- * ========= */
+/* ============= *
+ *    BORDERS    *
+ * ============= */
 .borderless {
     border: none;
 }
 
 .border-thin {
-    border: 1px solid;
+    border: var(--thin-border) var(--default-border-style);
 }
 
-.border-thick {
-    border: 2px solid;
+.rounded-4px {
+    border-radius: 0.25rem;
 }
 
-/* ============== *
- *  INPUT STYLES  *
- * ============== */
-button, input[type='submit'], input[type='button'] {
-    padding: 10px;
-    border-radius: 15px;
-    font-family: var(--phantom-font-flat);
+.rounded-8px {
+    border-radius: 0.5;
 }
 
-/* ============ *
- *  CONTAINERS  *
- * ============ */
-.flex-100 {
-    display: flex;
-    width: 100%;
+/* ============= *
+ *    PADDING    *
+ * ============= */
+.pad-1half {
+    padding: 0.5rem;
 }
 
-.align-center {
-    justify-content: center;
-    align-items: center;
+.pad-1rem {
+    padding: 1rem;
+}
+
+.pad-2rem {
+    padding: 2rem;
+}
+
+/* ====================== *
+ *    BACKGROUND COLOR    *
+ * ====================== */
+.bgc-primary {
+    background-color: var(--primary-col);
+}
+
+.bgc-secondary {
+    background-color: var(--secondary-col);
+}
+
+.bgc-tertiary {
+    background-color: var(--tertiary-col);
+}
+
+.bgc-quaternary {
+    background-color: var(--quaternary-col);
+}
+
+.hover-bgc-primary:hover {
+    background-color: var(--primary-col);
+}
+
+.hover-bgc-secondary:hover {
+    background-color: var(--secondary-col);
+}
+
+.hover-bgc-tertiary:hover {
+    background-color: var(--tertiary-col);
+}
+
+/* ================ *
+ *    TRANSITION    *
+ * ================ */
+.trans-slow {
+    transition: all var(--slow-transition);
+}
+
+.trans-medium {
+    transition: all var(--medium-transition);
+}
+
+.trans-fast {
+    transition: all var(--fast-transition);
 }
